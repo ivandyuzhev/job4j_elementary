@@ -19,3 +19,4 @@ public class Converter {
         System.out.println("120 rubles are " + dollar + " dollar.");
     }
 }
+
