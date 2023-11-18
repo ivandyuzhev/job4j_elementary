@@ -2,7 +2,7 @@
 
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
-*.github
+
 # Package Files #
 *.jar
 *.war
