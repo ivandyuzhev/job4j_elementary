@@ -1,4 +1,4 @@
-package ru.job4j;
+package ru.job4j.calculator;
 
 public class ArgMethod {
 
@@ -15,4 +15,3 @@ public class ArgMethod {
         ArgMethod.hello(name, age);
     }
 }
-
