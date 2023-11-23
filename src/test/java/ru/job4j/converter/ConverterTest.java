@@ -1,6 +1,9 @@
 package ru.job4j.converter;
+
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.*;
+
 class ConverterTest {
 
     @Test
@@ -11,7 +14,6 @@ class ConverterTest {
         float eps = 0.0001f;
         assertThat(out).isEqualTo(expected, withPrecision(eps));
     }
-
 
     @Test
     void whenConvert200RblThen3dot3333Euro() {
