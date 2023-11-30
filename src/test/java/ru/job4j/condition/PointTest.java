@@ -12,7 +12,7 @@ class PointTest {
         int y1 = 0;
         int x2 = 2;
         int y2 = 0;
-        double out = Point.distance1(x1, y1, x2, y2);
+        double out = Point.distance(x1, y1, x2, y2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
 
     }
@@ -24,7 +24,7 @@ class PointTest {
         int y1 = 0;
         int x2 = 5;
         int y2 = 6;
-        double out = Point.distance2(x1, y1, x2, y2);
+        double out = Point.distance(x1, y1, x2, y2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
 
     }
@@ -36,19 +36,19 @@ class PointTest {
         int y1 = 0;
         int x2 = 7;
         int y2 = 4;
-        double out = Point.distance3(x1, y1, x2, y2);
+        double out = Point.distance(x1, y1, x2, y2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
 
     }
 
     @Test
     void when40to44then8() {
-        double expected = 8;
-        int x1 = 4;
+        double expected = 10;
+        int x1 = 0;
         int y1 = 0;
-        int x2 = 4;
-        int y2 = 4;
-        double out = Point.distance4(x1, y1, x2, y2);
+        int x2 = 6;
+        int y2 = 8;
+        double out = Point.distance(x1, y1, x2, y2);
         assertThat(out).isEqualTo(expected, withPrecision(0.01));
 
     }
