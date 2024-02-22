@@ -16,6 +16,7 @@ public class MatrixCheckTest {
         boolean result = MatrixCheck.monoVertical(input, column);
         assertThat(result).isTrue();
     }
+
     @Test
     public void whenHasMonoVerticalNotFullOne() {
         char[][] input = {
@@ -27,6 +28,7 @@ public class MatrixCheckTest {
         boolean result = MatrixCheck.monoVertical(input, column);
         assertThat(result).isFalse();
     }
+
     @Test
     public void whenHasMonoVerticalNotFullTwo() {
         char[][] input = {
