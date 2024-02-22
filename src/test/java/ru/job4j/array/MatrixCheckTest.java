@@ -1,42 +1,43 @@
 package ru.job4j.array;
 
 import org.junit.jupiter.api.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MatrixCheckTest {
     @Test
-    public void whenDiagonalFullX() {
+    public void whenHasMonoHorizontal() {
         char[][] input = {
-                {'X', ' ', ' '},
-                {' ', 'X', ' '},
-                {' ', ' ', 'X'},
+                {' ', ' ', ' '},
+                {'X', 'X', 'X'},
+                {' ', ' ', ' '},
         };
-        char[] result = MatrixCheck.extractDiagonal(input);
-        char[] expected = {'X', 'X', 'X'};
-        assertThat(result).containsExactly(expected);
+        int row = 1;
+        boolean result = MatrixCheck.monoHorizontal(input, row);
+        assertThat(result).isTrue();
     }
 
     @Test
-    public void whenDiagonalFullOne() {
+    public void whenHasMonoHorizontalNotFullRowTwo() {
         char[][] input = {
-                {'1', ' ', ' '},
-                {' ', '1', ' '},
-                {' ', ' ', '1'},
+                {' ', ' ', ' '},
+                {' ', ' ', ' '},
+                {'X', 'X', ' '}
         };
-        char[] result = MatrixCheck.extractDiagonal(input);
-        char[] expected = {'1', '1', '1'};
-        assertThat(result).containsExactly(expected);
+        int row = 2;
+        boolean result = MatrixCheck.monoHorizontal(input, row);
+        assertThat(result).isFalse();
     }
 
     @Test
-    public void whenDiagonalMix() {
+    public void whenHasMonoHorizontalNotFullRowOne() {
         char[][] input = {
-                {'X', ' ', ' '},
-                {' ', 'Y', ' '},
-                {' ', ' ', 'Z'},
+                {' ', ' ', ' '},
+                {' ', 'X', 'X'},
+                {' ', ' ', ' '}
         };
-        char[] result = MatrixCheck.extractDiagonal(input);
-        char[] expected = {'X', 'Y', 'Z'};
-        assertThat(result).containsExactly(expected);
+        int row = 1;
+        boolean result = MatrixCheck.monoHorizontal(input, row);
+        assertThat(result).isFalse();
     }
 }

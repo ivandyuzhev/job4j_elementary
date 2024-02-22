@@ -1,11 +1,12 @@
 package ru.job4j.array;
 
 public class MatrixCheck {
-    public static char[] extractDiagonal(char[][] board) {
-        char[] result = new char[board.length];
+    public static boolean monoHorizontal(char[][] board, int row) {
         for (int i = 0; i < board.length; i++) {
-            result[i] = board[i][i];
+            if (board[row][i] != 'X') {
+                return false;
+            }
         }
-        return result;
+        return true;
     }
 }
