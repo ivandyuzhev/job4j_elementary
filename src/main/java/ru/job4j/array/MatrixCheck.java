@@ -9,4 +9,13 @@ public class MatrixCheck {
         }
         return true;
     }
+
+    public static boolean monoHorizontal(char[][] board, int raw) {
+        for (int i = 0; i < board.length; i++) {
+            if (board[raw][i] != 'X') {
+                return false;
+            }
+        }
+        return true;
+    }
 }
