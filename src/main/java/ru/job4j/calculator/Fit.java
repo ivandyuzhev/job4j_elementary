@@ -19,4 +19,5 @@ public class Fit {
         System.out.printf("Man with height %d cm has ideal weight %.2f kg%n", height, man);
         System.out.printf("Woman with height %d cm has ideal weight %.2f kg%n", height, woman);
     }
+
 }
