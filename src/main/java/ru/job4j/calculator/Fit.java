@@ -16,8 +16,7 @@ public class Fit {
         short height = 170;
         double man = Fit.manWeight(height);
         double woman = Fit.womanWeight(height);
-        System.out.println("Man 187 is " + man);
-        System.out.println("Woman 170 is " + woman);
+        System.out.printf("Man with height %d cm has ideal weight %.2f kg%n", height, man);
+        System.out.printf("Woman with height %d cm has ideal weight %.2f kg%n", height, woman);
     }
-
 }
